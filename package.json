@@ -14,9 +14,7 @@
   "dependencies": {
     "body": "^4.6.0",
     "concat-stream": "^1.4.7",
-    "cookie": "^0.1.2",
     "mongodb": "^1.4.30",
-    "nanoajax": "^0.1.1",
     "node-uuid": "^1.4.2",
     "phantom": "^0.7.2",
     "reqwest": "^1.1.5",

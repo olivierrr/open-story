@@ -1,6 +1,5 @@
 var fs = require('fs')
 var http = require('http')
-var cookie = require('cookie')
 var concat = require('concat-stream')
 var Router = require('unpm-router')
 var formBody = require('body/form')
@@ -23,16 +22,14 @@ db.connect(config.mongo, function() {
 
 /**
  * Upsert events to DB.
- * Set session cookie if missing.
+ * Generate session uuid if missing.
  */
 router.add('post', '/update', function(req, res) {
   formBody(req, {}, function(err, data) {
-
     // console.log(data)
 
     if(!data.session) {
       data.session = uuid.v4()
-      res.setHeader('Set-Cookie', cookie.serialize(config.cookieName, data.session))
     }
 
     if(data.json) {
