@@ -1,0 +1,6 @@
+
+{
+  "port": 3001,
+  "cookieName": "derp",
+  "mongo": "mongodb://dev:dev@ds039411.mongolab.com:39411/full-picture"
+}
