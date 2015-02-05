@@ -1,13 +1,12 @@
 {
-  "name": "free-story",
+  "name": "open-story",
   "version": "1.0.0",
   "description": "",
-  "main": "client.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client-dev": "watchify ./client.js -o ./static/bundle.js & http-server ./static",
-    "server-dev": "nodemon ./index.js",
-    "dev": "npm run client-dev & npm run server-dev"
+    "server-dev": "nodemon ./index.js"
   },
   "author": "olivierrr",
   "license": "MIT",

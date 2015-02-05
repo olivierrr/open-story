@@ -44,7 +44,8 @@ function click(e) {
 
 function key(e) {
   return {
-    keyCode: e.keyCode
+    keyCode: e.keyCode,
+    target: selectorQuery(e.target)
   }
 }
 
@@ -70,6 +71,7 @@ function paint(x, y) {
 
 function emit() {
   console.log('emits')
+  // console.log(JSON.stringify(events))
 
   var _events = events.slice()
   events = []
